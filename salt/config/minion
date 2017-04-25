@@ -1,0 +1,19 @@
+## Look locally for files
+file_client: local
+
+## where the salt states & files are located
+file_roots:
+  base:
+    - /vagrant/salt/states
+
+## where pillar data is located
+pillar_roots:
+  base:
+    - /vagrant/salt/pillar
+
+## Manage output
+state_verbose: False
+state_output: mixed
+
+## Set the global failhard flag. This informs all states to stop running states at the moment a single state fails
+failhard: True
